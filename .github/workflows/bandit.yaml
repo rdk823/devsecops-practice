@@ -13,4 +13,4 @@ jobs:
       - name: Security check with Bandit
         uses: ioggstream/bandit-report-artifacts@v0.0.2
         with:
-          project-path: ./bandit
+          project_path: ./bandit
