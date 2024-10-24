@@ -10,8 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the content of the local src directory to the working directory
 COPY src/ .
-RUN adduser myappuser
-RUN chown myappuser. /app -R
+RUN adduser myappuser && \
+    chown myappuser. /app -R
 USER myappuser
 
 EXPOSE 5000
