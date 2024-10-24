@@ -39,4 +39,5 @@ jobs:
           severity: 'CRITICAL,HIGH'
       - name: Push docker image to amazon ECR
         run: |
-          docker tag myapp:latest ${{ steps.login-ecr.output.registry }}/development/devsecops:latest
+          docker tag myapp:latest ${{ steps.login-ecr.output.registry }}/devsecops/myapp:latest
+          docker push ${{ steps.login-ecr.output.registry }}/devsecops/myapp:latest
