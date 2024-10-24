@@ -7,7 +7,7 @@ on:
 
 jobs:
   bandit-scan:
-    runs-on: uduntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Security check with Bandit
